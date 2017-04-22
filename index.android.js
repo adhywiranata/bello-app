@@ -9,7 +9,8 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Image,
 } from 'react-native';
 
 export default class belloApp extends Component {
@@ -17,15 +18,14 @@ export default class belloApp extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Bello
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <Text style={styles.tagline}>Belanja Semudah Bilang Hello!</Text>
+        <Text style={{ color: 'white', marginTop: '80%' }}>Supported By</Text>
+        <Image
+          source={{ uri: 'http://www.mus-watch.com/wp-content/uploads/2016/07/bukalapak.png'}}
+          style={{ width: '30%', height: 100, resizeMode: 'cover' }}
+        />
       </View>
     );
   }
@@ -36,12 +36,21 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#D8114C',
   },
   welcome: {
+    fontSize: 60,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    margin: 5,
+    color: '#FFFFFF',
+    marginTop: '30%'
+  },
+  tagline: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 0,
+    color: '#FFFFFF',
   },
   instructions: {
     textAlign: 'center',
